@@ -15,11 +15,13 @@ const tvshows = [
   `timeless`,
   `the oa`,
 ];
-
+//added return function 
 const wrapWithTag = (content, tagname) => {
-  `<${tagname}>${content}</${tagname}>`;
+  return `<${tagname}>${content}</${tagname}>`;
 };
-
+//added const show
+const show = tvshows;
+//changed show to tvshows at the start of line 25
 document.write(`<ol>`);
-show.forEach(tvshows => document.write(wrapWithTag(show, `li`)));
+tvshows.forEach(show => document.write(wrapWithTag(show, `li`)));
 document.write(`</ol>`);
