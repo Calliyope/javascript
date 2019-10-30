@@ -16,8 +16,14 @@ const tvshows = [
   `the oa`,
 ];
 
+// to display the array backwards I added reverse to the write function
+tvshows.reverse();
+
+//this script wasnt displayng properly because the reference 'movies' was not defined. The fucntion was calling for movies to be written by it was actually tvshows as declared in the constant above.
 document.write(`<ol>`);
-for (let i = 0; i < movies.length; i++) {
-  document.write(`<li>${movies[i]}</li>`);
+for (let i = 0; i < tvshows.length; i++) {
+  document.write(`<li>${tvshows[i]}</li>`);
 }
 document.write(`</ol>`);
+
+
