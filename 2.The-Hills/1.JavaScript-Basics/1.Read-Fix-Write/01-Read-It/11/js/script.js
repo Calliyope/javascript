@@ -1,3 +1,5 @@
+
+//more info has been provided here. the movie constant now also contains a title, year and director sub constant?
 const movies = [
   {
     title: `The Godfather`,
@@ -42,8 +44,10 @@ const movies = [
   },
 ];
 
+//tagging constant for later
 const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 
+//the list is created bu returning movies after they've been made lower case and the wrapped as list items and then joined. The selector which says to only show the title is on line 54 => movie.TITLE to lower case
 const createList = movies => {
   return `
     <ol>${movies

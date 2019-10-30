@@ -18,11 +18,14 @@ const theatres = [
   },
 ];
 
+// Here the const calculateAvailable is being made by takinf the theatres and making a calculation. the available will be the capacity - the occupied
 const calculateAvailable = theatre => {
   theatre.available = theatre.capacity -  theatre.occupied;
   return theatre;
 };
 
+
+//the console logs the theatres length (how many theatres there are) then it lofs the total capacity which is made using the reduce function - taking the total of all theatres and then adding them? then lastly is logs the calculation of the available spots by performing the calculate Available function we made above
 console.log(`Theatres:`, theatres.length);
 console.log(`Total capacity:`, theatres.reduce((total, theatre) => total + theatre.capacity, 0));
 console.table(theatres.map(theatre => calculateAvailable(theatre)));

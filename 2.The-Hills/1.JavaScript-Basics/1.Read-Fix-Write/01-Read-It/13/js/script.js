@@ -52,10 +52,14 @@ const parseMovieData = movie => {
   return result;
 };
 
+
+//this const is created by taking the years and ordring them using a sort function
 const orderByYear = (a, b) => {
   return a.year - b.year;
 };
 
+
+//the list is created by taking the movies and returning: movies using the sort by year function above which has put the movies in oldest to youngest, then wrapping with tags and making them list items, then joining the info together into a list
 const createList = movies => {
   return `<ul>${movies
     .sort(orderByYear)
@@ -64,6 +68,7 @@ const createList = movies => {
   }</ul>`;
 };
 
+// console and socument both display a list of movies sorted by year
 console.table(movies);
 document.write(createList(movies));
 console.table(movies);

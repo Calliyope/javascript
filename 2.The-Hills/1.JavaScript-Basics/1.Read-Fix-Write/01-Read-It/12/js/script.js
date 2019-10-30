@@ -44,11 +44,13 @@ const movies = [
 
 const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 
+// ok here, the movie const is being segmented and wrapped in tags which make it a p element. example, the movie, title becomes a p and then also the movie and year becomes a p. only the second part of the brackets will be displayed. 
 const parseMovieData = movie =>
   wrapWithTag(movie.title, `p`) +
   wrapWithTag(movie.year, `p`) +
   wrapWithTag(movie.director, `p`);
 
+  //the list is created by making a map of all tagged items which is now all items and making them li elements
 const createList = movies => {
   return `<ul>${movies
     .map(movie => wrapWithTag(parseMovieData(movie), `li`))
@@ -56,4 +58,5 @@ const createList = movies => {
   }</ul>`;
 };
 
+//here the list is displayed on the screen
 document.write(createList(movies));
