@@ -16,3 +16,10 @@ for (let i = 0; i < movies.length; i++) {
   document.write(`<li>${movies[i]}</li>`);
 }
 document.write(`</ol>`);
+
+
+//PREDICTION
+//I think it's going to display them in a list with a numbered list going up in increments of one each time
+
+// Correct!
+
