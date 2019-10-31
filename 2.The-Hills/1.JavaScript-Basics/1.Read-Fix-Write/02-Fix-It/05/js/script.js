@@ -24,10 +24,12 @@ const writeTitle = title => {
 };
 
 const uCFirst = sentence => {
-  const words = sentence.split(``);
-  words = words.map(word => word.charAt(0).toUpperCase() + word.slice());
-  return words.join();
+  const words = sentence.split(` `);
+  const upperCase = words.map(word => word.charAt(0).toUpperCase() + word.slice(1)); // The slice() method returns the selected elements in an array, as a new array object. The slice() method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.
+  return upperCase.join(' ');
 };
+// join - the elements will be separated by a specified separator. The default separator is comma (,). here I specified it to be a space by using ' '
+
 
 document.write(`<ol>`);
 shows.forEach(show => writeTitle(show));

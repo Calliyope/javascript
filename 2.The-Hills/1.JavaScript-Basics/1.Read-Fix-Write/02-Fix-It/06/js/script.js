@@ -64,10 +64,13 @@ const shows = [
 
 const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 
-const topScoreFilter = show => { };
+//created this constant in order to filter the shows by their scores/ declare a constant, give it a bame, say it = shows.filter function, say that function consists of looking at a show from the show variable, then looking at the shows score and seeing if it is > or = to 90
+const topScoreFilter = shows.filter(show => show.score >= 90);
 
-shows.filter(topScoreFilter);
+//double checking the constant i just made works -- it does
+console.log(topScoreFilter);
 
+//changed the line 75 'shows.foreach to refernce my new constant made above
 document.write(`<ol>`);
-shows.forEach(show => document.write(wrapWithTag(show.title, `li`)));
+topScoreFilter.forEach(show => document.write(wrapWithTag(show.title, `li`)));
 document.write(`</ol>`);
