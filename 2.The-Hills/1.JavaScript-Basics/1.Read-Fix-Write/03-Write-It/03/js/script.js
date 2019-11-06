@@ -42,19 +42,6 @@ const oscarWinners = [
     }
   ]
 
-
-// I have made a new array for the ages. The array takes one property (age) of the above master array (oscarWinners) and maps it.
-
-const oscarAges = oscarWinners.map(oscarWinner => oscarWinner.age);
-
-
-
-// Checking my new array works - they do.
-
-console.log(oscarAges);
-
-
-
 // The tagging script.
 
 const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;

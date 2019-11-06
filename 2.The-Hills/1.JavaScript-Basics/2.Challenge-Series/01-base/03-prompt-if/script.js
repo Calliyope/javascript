@@ -9,8 +9,9 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-  // your code here
-
-})();
+const wantCake = prompt("Do you want some cake? ");
+  if(wantCake === "yes" || wantCake === "yeah" || wantCake === "Yeah" || wantCake === "Yes") {
+alert("Congratulations! You may have some cake");
+} else {
+alert("More cake for me then :p !")
+}
