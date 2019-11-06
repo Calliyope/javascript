@@ -42,20 +42,15 @@ const oscarWinners = [
     }
   ]
 
-// I have made 3 new arrays. Each array takes one property of the above master array (oscarWinners) and maps it. 
 
-const oscarActors = oscarWinners.map(oscarWinner => oscarWinner.actor);
-
-const oscarFilms = oscarWinners.map(oscarWinner => oscarWinner.film);
+// I have made a new array for the ages. The array takes one property (age) of the above master array (oscarWinners) and maps it.
 
 const oscarAges = oscarWinners.map(oscarWinner => oscarWinner.age);
 
 
 
-// Checking my new arrays work - they do.
+// Checking my new array works - they do.
 
-console.log(oscarActors);
-console.log(oscarFilms);
 console.log(oscarAges);
 
 
@@ -69,7 +64,7 @@ const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 // I sorted the master array to be sorted by the age of the actor = oldest being first
 
 const sortByAge = (a, b) => {
-    return a.age - b.age;
+  return -1 * (a.age - b.age);
 };
 
 oscarWinners.sort(sortByAge)
@@ -79,7 +74,7 @@ oscarWinners.sort(sortByAge)
 // Creating the list for display.
 
 document.write(`<ul>`);
-oscarWinners.forEach(winner => document.write(wrapWithTag(winner, `li`)));
+oscarWinners.forEach(winner => document.write(wrapWithTag(winner.actor, `li`)));
 document.write(`</ul>`);
 
 
@@ -89,5 +84,70 @@ document.write(`</ul>`);
 const add = (a,b) => a + b;
 
 const sum = oscarAges.reduce(add);
-console.log(oscarAges);
+console.log(sum);
+
+
+
+
+
+// CONDENSED SOLUTION
+
+
+// var sortedByAge = oscarWinners.sort(ow => ow.age * -1);
+
+// document.write(`<ul>`);
+// sortedByAge.forEach(ow => document.write(wrapWithTag(ow.actor, `li`)));
+// document.write(`</ul>`);
+
+// console.log(sortedByAge);
+
+
+// const add2 = (a,b) => a + b.age;
+
+// const sum2 = oscarWinners.reduce(add2, 0);
+// console.log(sum2);
+
+
+
+// A reminder about how the reduce function works in practise
+
+// var numbers = [175, 50, 25];
+
+// var outcome = numbers.reduce((theOutComeOfLastTime,theCurrentValue) => theOutComeOfLastTime - theCurrentValue, 0);
+
+// console.log("outcome = " + outcome);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var sortedByAge = oscarWinners.sort(ow => ow.age * -1);
+
+// document.write(`<ul>`);
+// sortedByAge.forEach(ow => document.write(wrapWithTag(ow.actor, `li`)));
+// document.write(`</ul>`);
+
+// console.log(sortedByAge);
+
+
 
