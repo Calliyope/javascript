@@ -49,19 +49,35 @@ const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 
 // First I process the fee data so that it can be displayed
 
-const parseFeeInfo = fee =>
-  wrapWithTag(fee.title, `p`) +
-  wrapWithTag(fee.price, `p`);
+const parseFeeInfo = fee => {
+   const pTitle = wrapWithTag(fee.title, `p`);
+   const pPrice = wrapWithTag(fee.price, `p`);
 
-
+   return wrapWithTag(pTitle + pPrice, 'li');
+}
 
 // Then I display the plain fee information
 
-const createList = feeList => {
-  return `<ul>${feeList
-    .map(fees => wrapWithTag(parseFeeInfo(fees), `li`))
-    .join(``)
-  }</ul>`;
+const createList = (feeList, extraList) => {
+  let outputHtml = "";
+
+  for(const fee of feeList) {
+    outputHtml += "<ul>";
+
+    outputHtml += wrapWithTag(`${fee.title} (${fee.price})`, "li");
+
+    for(const extra of extraList){
+        const name = `${fee.title} + ${extra.title}`;
+        const price = fee.price + extra.price;
+
+        outputHtml += wrapWithTag(`${name} (${price})`, "li");
+    }
+
+    outputHtml += "</ul>";
+  }
+
+  return outputHtml;
+
 };
 
-document.write(createList(feeList));
+document.write(createList(fees, extras));

@@ -14,3 +14,43 @@
     // your code here
 
 })();
+
+
+
+
+// Make an array of 1-100
+
+const numbersStart = 1;
+const numbersEnd = 100;
+
+const arr = [];
+
+for (var i = numbersStart; i <= numbersEnd; i++) {
+
+     arr.push(i);
+}
+
+console.log(arr);
+
+
+
+
+// Make a tester for if numbers are a multiple of 3 or 5
+
+const test35 = function (x) 
+{
+  if (x % 3 == 0 || x % 5 == 0) 
+  {
+    return true;
+  } 
+  else {
+    return false;
+  }
+}
+
+console.log(test35(arr));
+
+
+
+
+

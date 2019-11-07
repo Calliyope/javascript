@@ -12,30 +12,22 @@
 
 
 
-// Here I will create the 3 questions
+let userHasConfirmed;
 
-const detailsName = prompt("What is your name?");
+do
+{
 
-const detailsAge = prompt("What is your age?");
+  const detailsName = prompt("What is your name?");
+  const detailsAge = prompt("What is your age?");
+  const detailsGender = prompt("What is your gender?");
 
-const detailsGender = prompt("What is your gender?");
+  userHasConfirmed = confirm("Are these details correct?\n\nYour name is: " + detailsName + "\nYour age is: " + detailsAge + "\nYour gender is: " + detailsGender);
 
-
-// This is the confirm option
-if (confirm("Are these details correct?\n\nYour name is: " + detailsName + "\nYour age is: " + detailsAge + "\nYour gender is: " + detailsGender)) {
+  if (userHasConfirmed) {
     alert("Thanks!");
   } else {
     alert("Please re-enter your information");
   } 
 
 
-
-
-
-//attempt using a function instead
-
-  function getDetails() {
-    let age = prompt("What is your age?");
-    let gender = prompt("What is your gender?");
-    let town = prompt("What is your hometown?")
-}    
+} while(!userHasConfirmed);

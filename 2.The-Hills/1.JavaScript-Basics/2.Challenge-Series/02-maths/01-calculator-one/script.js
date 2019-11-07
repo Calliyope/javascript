@@ -10,26 +10,32 @@
 // You will have time to focus on it later.
 
 (function() {
-    let numberOne = parseInt(document.getElementById("op-one").value)
-    let numberTwo = parseInt(document.getElementById("op-two").value)
 
     document.getElementById("addition").addEventListener("click", function() {
         // perform an addition
-        alert(numberOne + numberTwo)
+        let numberOne = parseInt(document.getElementById("op-one").value);
+        let numberTwo = parseInt(document.getElementById("op-two").value);
+        alert(numberOne + numberTwo);
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
         // perform an substraction
-        alert(numberOne - numberTwo)
+        let numberOne = parseInt(document.getElementById("op-one").value);
+        let numberTwo = parseInt(document.getElementById("op-two").value);
+        alert(numberOne - numberTwo);
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
         // perform an multiplication
-        alert(numberOne * numberTwo)
+        let numberOne = parseInt(document.getElementById("op-one").value);
+        let numberTwo = parseInt(document.getElementById("op-two").value);
+        alert(numberOne * numberTwo);
     });
 
     document.getElementById("division").addEventListener("click", function() {
         // perform an division
-        alert(numberOne / numberTwo)
+        let numberOne = parseInt(document.getElementById("op-one").value);
+        let numberTwo = parseInt(document.getElementById("op-two").value);
+        alert(numberOne / numberTwo);
     });
 })();
