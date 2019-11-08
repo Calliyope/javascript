@@ -20,7 +20,7 @@
 
 // Make an array of 1-100
 
-const numbersStart = 1;
+const numbersStart = 0;
 const numbersEnd = 100;
 
 const arr = [];
@@ -33,22 +33,51 @@ for (var i = numbersStart; i <= numbersEnd; i++) {
 console.log(arr);
 
 
+// Possibility one 
 
-
-// Make a tester for if numbers are a multiple of 3 or 5
-
-const test35 = function (x) 
-{
-  if (x % 3 == 0 || x % 5 == 0) 
-  {
-    return true;
-  } 
-  else {
-    return false;
+const getFizzBuzzValue = (number) => {
+  
+  if(number % 3 == 0 && number % 5 == 0) {
+    return "FizzBuzz";
+  } else 
+  if(number % 3 == 0) {
+    return "Fizz";
   }
-}
+  else if(number % 5 == 0){
+    return "Buzz";
+  }
+  else {
+    return number;
+  }
+};
 
-console.log(test35(arr));
+// Possibility two - more condensed as fizz and buzz only need to be written once
+
+const getFizzBuzzValue2 = (number) => {
+  var resultValue = "";
+
+  if(number % 3 == 0) {
+    resultValue += "Fizz";
+  }
+
+  if(number % 5 == 0) {
+    resultValue += "Buzz";
+  }
+
+  if(resultValue === "") {
+    return number;
+  }
+  else {
+    return resultValue
+  }
+};
+
+// This maps the array and attached the getFizzBuzzValue
+
+var output = arr.map(number => getFizzBuzzValue(number));
+
+console.log(output);
+
 
 
 
