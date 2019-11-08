@@ -11,8 +11,26 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+// get current date/time
 
-    // your code here
+let datetimeNow = new Date();
+console.log(datetimeNow);
 
+
+
+// make an if for the two options = before 18:00 it will say hello, after 18:00 it will say good evening 
+
+if (datetimeNow.getHours() < 18) {
+    document.getElementById("target").innerHTML = "Hello!";
+}
+
+if (datetimeNow.getHours() > 18) {
+    document.getElementById("target").innerHTML = "Good Evening!"
+}
 })();
+
+
+
+
+
+
