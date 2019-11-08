@@ -12,16 +12,16 @@
 (function() {
 
     var fruits = [
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
+        "apple",
+        "pear",
+        "strawberry",
+        "tomato",
         "orange",
-        "mandarine",
+        "mandarin",
         "durian",
-        "pêche",
-        "raisin",
-        "cerise",
+        "peach",
+        "grape",
+        "cherry",
     ];
 
     // your code here

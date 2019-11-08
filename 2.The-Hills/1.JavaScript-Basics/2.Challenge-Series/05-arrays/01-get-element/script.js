@@ -11,11 +11,11 @@
 
 (function() {
 
-    var fruits = [
+    const fruits = [
         "apple",
         "pear",
         "raspberry",
-        "tomatos",
+        "tomatoes",
         "kiwi",
         "banana",
         "orange",
@@ -26,6 +26,11 @@
         "cherry",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+    alert(fruits[3]);
+
+
+    });
 
 })();

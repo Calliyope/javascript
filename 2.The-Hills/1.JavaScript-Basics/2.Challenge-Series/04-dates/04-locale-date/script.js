@@ -11,8 +11,20 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+// Get the current date
 
-    // your code here
+let datetimeNow = new Date();
+console.log(datetimeNow);
 
+
+
+// parse the date info into the desired readable format
+
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+// display the nice new date in the html
+
+document.getElementById("target").innerHTML = datetimeNow.toLocaleDateString('en-EN', options);
 })();
+
+
