@@ -24,6 +24,22 @@
         "cherry",
     ];
 
-    // your code here
+    // on click splice the array
+
+    document.getElementById("run").addEventListener("click", function () {
+
+        fruits.splice(9, 1, 'kiwi');
+        fruits.splice(0, 1, 'banana');
+        alert(fruits);
+    
+    
+        });
+    
+
+
+
+    
+
+
 
 })();

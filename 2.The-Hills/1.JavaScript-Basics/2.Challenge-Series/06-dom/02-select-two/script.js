@@ -11,6 +11,6 @@
 
 (function() {
 
-    // your code here
+document.querySelector(".material").innerHTML = "owned";
 
 })();

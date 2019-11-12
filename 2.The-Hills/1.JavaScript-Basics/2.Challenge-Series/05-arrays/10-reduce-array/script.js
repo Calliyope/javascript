@@ -9,10 +9,9 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    var people = [
-        {
+    var people = [{
             firstname: "Grenville",
             lastname: "Stive",
             age: 64,
@@ -89,6 +88,34 @@
         },
     ];
 
-    // your code here
+    // click event
+
+    document.getElementById("run").addEventListener("click", function () {
+
+        // I will use the reduce method to add the ages up. first I make a function that the reduce method will use
+
+        
+        const peopleAges = people.map(person => person.age);
+
+
+
+
+        // check its working
+
+        console.log(peopleAges);
+        
+        
+
+        
+        let reduceMethod = (accumulator, currentValue) => accumulator + currentValue;
+
+
+
+
+        // in the console log I ask the reduce method to use my reduction function made above
+
+        console.log(peopleAges.reduce(reduceMethod));
+
+    });
 
 })();

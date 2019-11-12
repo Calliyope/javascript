@@ -9,11 +9,11 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     var fruits = [
         "apple",
-        "perry",
+        "pear",
         "strawberry",
         "tomato",
         "kiwi",
@@ -26,6 +26,11 @@
         "cherry",
     ];
 
-    // your code here
+    // I can use the includes array method to test if this array has the value 'apple' in it
+    document.getElementById("run").addEventListener("click", function () {
+
+        // I can use the includes array method to test if this array has the value 'apple' in it
+        console.log(fruits.includes("apple"));
+    });
 
 })();

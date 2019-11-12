@@ -9,25 +9,37 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     var fruits = [
-        "cerise",
+        "cherry",
         "durian",
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
+        "apple",
+        "pear",
+        "strawberry",
+        "tomato",
         "orange",
-        "mandarine",
-        "fraise",
+        "mandarin",
+        "strawberry",
         "durian",
-        "pêche",
-        "cerise",
-        "raisin",
-        "cerise",
+        "peach",
+        "cherry",
+        "grape",
+        "cherry",
     ];
 
-    // your code here
+    // click event
+    
+    document.getElementById("run").addEventListener("click", function () {
+
+        // I will use the filter mothod to create a new array which does not include the duplicated frutis
+
+        let uniqueFruits = fruits.filter(function (fruit, index) {
+            return fruits.indexOf(fruit) >= index;
+        });
+
+        console.log(uniqueFruits);
+
+    });
 
 })();

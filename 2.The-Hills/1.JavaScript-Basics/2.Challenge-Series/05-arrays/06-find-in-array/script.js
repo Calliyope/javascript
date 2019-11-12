@@ -89,6 +89,21 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+        // using the find function of array i can search for the person who has the first name as directed by the challenge info
+        let person = people.find(info => info.firstname == "Jean");
+            console.log(person.email);
+
+        function Jean() {
+            return person == "Jean";
+        }
+        console.log(people.findIndex(Jean))
+        
+
+
+        });   
+    
+    
 
 })();

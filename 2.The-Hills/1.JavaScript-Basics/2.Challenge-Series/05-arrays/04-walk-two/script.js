@@ -12,20 +12,28 @@
 (function() {
 
     var fruits = [
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
+        "apple",
+        "pearr",
+        "strawberry",
+        "tomato",
         "kiwi",
-        "banane",
+        "banana",
         "orange",
-        "mandarine",
+        "mandarin",
         "durian",
-        "pêche",
-        "raisin",
-        "cerise",
+        "peach",
+        "grape",
+        "cherry",
     ];
 
-    // your code here
+        // on click display the array using a for each
+
+        document.getElementById("run").addEventListener("click", function () {
+
+            fruits.forEach(function(fruit) {
+                console.log(fruit);
+            });   
+    
+    });
 
 })();

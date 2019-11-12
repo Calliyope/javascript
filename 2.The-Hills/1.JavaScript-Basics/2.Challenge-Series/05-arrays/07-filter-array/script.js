@@ -89,6 +89,9 @@
         },
     ];
 
-    // your code here
+    // I will need to use the filter array method which creates a new array out of an exisiting array with items which pass a criteria check
 
+    const newArray = people.filter(person => person.age > 18);
+
+    console.log(newArray);
 })();
