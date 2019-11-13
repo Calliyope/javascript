@@ -11,7 +11,22 @@
 
 (function() {
 
-    var list = document.getElementsByClassName("target")[0];
-    list.getElementsByClassName("target")[0].innerHTML = "owned";
+    // First I select all the elements which have the class target by using querySelectorAll
+
+    let targetClass = document.querySelectorAll(".target");
+
+
+
+
+    
+    // Then I use the new constant to target the class and change the html
+
+    targetClass[0].innerHTML = "owned";
+    targetClass[1].innerHTML = "owned";
+    targetClass[2].innerHTML = "owned";
+    targetClass[3].innerHTML = "owned";
+    targetClass[4].innerHTML = "owned";
+
+   
 
 })();
