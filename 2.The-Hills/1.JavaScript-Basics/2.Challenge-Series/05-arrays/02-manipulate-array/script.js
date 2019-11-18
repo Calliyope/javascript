@@ -1,17 +1,7 @@
-/* becode/javascript
- *
- * /05-arrays/02-manipulate-array/script.js - 5.2: manipulation de tableau
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
+(function () {
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
-
-(function() {
-
-    var fruits = [
+    // Here I make a variable called fruits. The variable is an array of values. 
+    let fruits = [
         "apple",
         "pear",
         "strawberry",
@@ -24,21 +14,21 @@
         "cherry",
     ];
 
-    // on click splice the array
+    // Line 20 is a click event. It has a listener which waits for the click attached the button with the ID 'run'. 
 
     document.getElementById("run").addEventListener("click", function () {
 
         fruits.splice(9, 1, 'kiwi');
         fruits.splice(0, 1, 'banana');
         alert(fruits);
-    
-    
-        });
-    
+
+
+    });
 
 
 
-    
+
+
 
 
 

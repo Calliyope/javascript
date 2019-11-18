@@ -1,14 +1,7 @@
-/* becode/javascript
- *
- * /01-base/01-var-alert/script.js - 1.1: var & alert
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
-
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
-
+// a const is a variable. Here I declare a variable and name it 'first'. I give the first variable the value of 'Hello, World!'. 
 const first = 'Hello, World!';
 
+
+
+// An alert will display a popup like flag from the top of the screen when the page loads. It will display in it the content of the first variable. 
 alert(first);

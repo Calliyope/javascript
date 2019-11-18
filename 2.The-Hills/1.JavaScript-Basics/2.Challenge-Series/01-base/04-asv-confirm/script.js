@@ -1,21 +1,8 @@
-/* becode/javascript
- *
- * /01-base/04-asv-confirm/script.js - 1.4: ASV avec confirmation
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
-
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
-
-
-
-
+// let is another way to make a variable. let is different from const because a let variable can be altered by the upcoming code. A const stays constant. 
 let userHasConfirmed;
 
-do
-{
+// I start a do here. It means it will DO the following things: make the detailsName/Age/Gender  variables. It then makes a userHasConfirmed 'confirm' prompt where it employs the fresh variables to ask if they user agrees. 
+do {
 
   const detailsName = prompt("What is your name?");
   const detailsAge = prompt("What is your age?");
@@ -23,11 +10,14 @@ do
 
   userHasConfirmed = confirm("Are these details correct?\n\nYour name is: " + detailsName + "\nYour age is: " + detailsAge + "\nYour gender is: " + detailsGender);
 
+
+  // Now I make an if insie the do. It asks IF the user confirms then it will alert them with a thanks message. If ELSE then it asks for a reenter. 
   if (userHasConfirmed) {
     alert("Thanks!");
   } else {
     alert("Please re-enter your information");
-  } 
+  }
 
+  // This WHILE is part of the DO started above. It states that while the user has not (!) met the conditions of the userHasConfirmed variable, the DO loop will continue forever. Once the user agrees/confirms, the DO WHILE will stop. 
 
-} while(!userHasConfirmed);
+} while (!userHasConfirmed);

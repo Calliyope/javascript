@@ -1,18 +1,17 @@
-/* becode/javascript
- *
- * /06-dom/05-hover-image/script.js - 6.5: survol d'image
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
+var img = document.getElementsByTagName("img")[0];
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
+var temp;
 
-function changePic1() {
-    document.getElementById("kissyface").src = "../../_shared/img/kiss.svg";
-}
+img.addEventListener("mouseenter", function () {
 
-function changePic2() {
-    document.getElementById("kissyFace").src = "../../_shared/img/kiss-wink-heart.svg";
-}
+    var hoverPicUrl = img.getAttribute("data-hover");
+
+    temp = img.getAttribute("src");
+
+    img.src = hoverPicUrl;
+})
+
+img.addEventListener("mouseleave", function () {
+
+    img.src = temp;
+})
